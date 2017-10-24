@@ -49,6 +49,11 @@ module.exports = {
             }
           ]
         })
+      },
+      // File Loader for adding assests to components
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+        use: ['file-loader']
       }
     ]
   },
