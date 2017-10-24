@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import css from '../../styles/styles';
+import PropTypes from 'prop-types';
 
 import maidenImage from '../assets/maiden.png';
 
