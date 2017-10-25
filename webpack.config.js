@@ -14,7 +14,7 @@ const paths = {
 // Webpack configuration
 module.exports = {
   devtool: 'source-map',
-  entry: path.join(paths.JS, 'app.js'),
+  entry: path.join(paths.JS, 'index.jsx'),
   output: {
     path: paths.DIST,
     filename: 'app.bundle.js'
@@ -59,6 +59,7 @@ module.exports = {
   },
   // Enable importing JS files without specifying their extenstion
   resolve: {
-    extensions: ['.js', '.jsx', '.styl']
+    extensions: ['.js', '.jsx', '.styl'],
+    modules: [path.resolve('./client'), path.resolve('./node_modules')]
   }
 };
