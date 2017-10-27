@@ -17,7 +17,12 @@ module.exports = {
   entry: path.join(paths.JS, 'index.jsx'),
   output: {
     path: paths.DIST,
-    filename: 'app.bundle.js'
+    filename: 'app.bundle.js',
+    publicPath: '/'
+  },
+  // This fixes crosscripting errors using react router
+  devServer: {
+    historyApiFallback: true
   },
   // Tell webpack to use html plugin
   // index.html is used as a template in which it'll inject bundled app.
@@ -60,6 +65,10 @@ module.exports = {
   // Enable importing JS files without specifying their extenstion
   resolve: {
     extensions: ['.js', '.jsx', '.styl'],
-    modules: [path.resolve('./client'), path.resolve('./node_modules')]
+    alias: {
+      assets: path.resolve(__dirname, 'src', 'assets'),
+      components: path.resolve(__dirname, 'src', 'js', 'components'),
+      containers: path.resolve(__dirname, 'src', 'js', 'containers')
+    }
   }
 };

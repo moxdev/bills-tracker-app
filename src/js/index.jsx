@@ -1,12 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import css from '../../styles/styles';
-import App from './components/App';
-import AppState from './components/AppState';
+import App from 'containers/App';
+import AppState from 'containers/AppState';
 
-ReactDOM.render(
-  <AppState>
-    <App />
-  </AppState>,
+render(
+  <BrowserRouter>
+    <AppState>
+      <App />
+    </AppState>
+  </BrowserRouter>,
   document.getElementById('root')
 );
