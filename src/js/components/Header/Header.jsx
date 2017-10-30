@@ -7,7 +7,7 @@ class Header extends Component {
     return (
       <header>
         <Logo />
-        <Navbar />
+        <Navbar user={this.props.user} />
       </header>
     );
   }

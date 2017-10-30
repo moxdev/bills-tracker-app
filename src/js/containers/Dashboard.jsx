@@ -8,6 +8,7 @@ class Dashboard extends Component {
     return (
       <div className="dashboard-container">
         <DashboardHeader user={this.props.user} />
+        <h2>Your Items</h2>
         <DashboardList items={this.props.items} />
       </div>
     );

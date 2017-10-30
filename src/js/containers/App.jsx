@@ -9,7 +9,7 @@ class App extends Component {
     const state = this.props.appState;
     return (
       <div className="app-wrapper">
-        <Header />
+        <Header user={state.user} />
         <Main user={state.user} items={state.items} />
       </div>
     );

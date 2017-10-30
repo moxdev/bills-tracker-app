@@ -5,7 +5,7 @@ class Navbar extends Component {
   render() {
     return (
       <nav className="main-nav">
-        <Link to={'/'}>Home</Link>
+        <Link to={`/user/${this.props.user.id}`}>Dashboard</Link>
         <Link to={'/'}>About</Link>
       </nav>
     );

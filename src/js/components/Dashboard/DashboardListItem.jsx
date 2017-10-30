@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class DashboardListItem extends Component {
   render() {
-    const item = this.props.details[id];
-    console.log(item);
-    return <li>listitem</li>;
+    return (
+      <li className="list-item">
+        <Link to={`/item/${this.props.details.id}`}>{this.props.index}</Link>
+      </li>
+    );
   }
 }
 
