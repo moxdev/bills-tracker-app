@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import maidenImage from 'assets/maiden.png';
+import Eddie from 'assets/eddie.gif';
 
 const Logo = () => (
   <Link to={'/'}>
-    <img className="logo" src={maidenImage} alt="Up The Irons!" />
+    <img className="logo" src={Eddie} alt="Up The Irons!" />
   </Link>
 );
 
